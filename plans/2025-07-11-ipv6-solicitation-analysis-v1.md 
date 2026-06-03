@@ -1,0 +1,51 @@
+# IPv6 Solicitation Analysis
+
+## Objective
+To analyze the usage, initialization, interaction with Open vSwitch, rule configuration for ICMPv6 router solicitation forwarding, handler definition for router advertisement, and conditions for rule enforcement within the Magma LTE gateway's pipelined application, specifically focusing on the `test_ipv6_solicitation.py` test file and related components.
+
+## Implementation Plan
+1. **Analyze the Test File Structure and Purpose**
+  - Dependencies: None
+  - Notes: Clarity on test purpose is established; no user input needed at this stage.
+  - Files: `lte/gateway/python/magma/pipelined/tests/test_ipv6_solicitation.py`
+  - Status: In Progress
+2. **Locate Controller Initialization**
+  - Dependencies: Step 1
+  - Notes: May need user input if initialization spans multiple modules.
+  - Files: `lte/gateway/python/magma/pipelined/app/ipv6_solicitation.py`, `lte/gateway/python/magma/pipelined/tests/app/start_pipelined.py`
+  - Status: Not Started
+3. **Trace OpenFlow Rule Configuration for ICMPv6 Router Solicitation**
+  - Dependencies: Step 2
+  - Notes: Clarity depends on rule definition location; may need user input for file pointers.
+  - Files: `lte/gateway/python/magma/pipelined/app/ipv6_solicitation.py`
+  - Status: Not Started
+4. **Identify Handler Function for Router Advertisement**
+  - Dependencies: Step 3
+  - Notes: May need user input if handler naming or location isn't standard.
+  - Files: `lte/gateway/python/magma/pipelined/app/ipv6_solicitation.py`
+  - Status: Not Started
+5. **Determine Conditions for Rule Enforcement**
+  - Dependencies: Step 3 and Step 4
+  - Notes: Likely needs user input for specific configs or test scenarios.
+  - Files: `lte/gateway/python/magma/pipelined/app/ipv6_solicitation.py`, configuration files
+  - Status: Not Started
+6. **Document Findings in a Plan File**
+  - Dependencies: All previous steps
+  - Notes: Final step; user input may be needed for confirmation.
+  - Files: This plan document
+  - Status: Not Started
+
+## Verification Criteria
+- Confirmation that the test file's purpose and scenarios for IPv6 solicitation are clearly understood.
+- Identification of the exact location and method of `IPV6SolicitationController` initialization.
+- Detailed mapping of OpenFlow rules for forwarding ICMPv6 router solicitation packets, handler functions for router advertisements, and the conditions under which these rules are enforced.
+
+## Potential Risks and Mitigations
+1. **Complexity of OpenFlow Rules**
+   - Mitigation: Utilize static code analysis supplemented by runtime flow dumps or debugging if necessary to trace rule definitions and applications.
+2. **Dependency on OVS Configuration**
+   - Mitigation: Explore broader system setup files and documentation for OVS interactions; seek user input on specific configurations if needed.
+
+## Alternative Approaches
+1. **Runtime Debugging**: Focus on executing tests and analyzing runtime logs or OpenFlow dumps for dynamic behavior insights instead of static code tracing.
+2. **Broader Module Analysis**: Expand scope to include related pipelined app modules for a holistic view of IPv6 handling if specific answers are not found in targeted files.
